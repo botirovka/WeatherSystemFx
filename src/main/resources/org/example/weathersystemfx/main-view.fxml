@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane prefHeight="508.0" prefWidth="805.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Weather Stations">
+                    <content>
+                        <AnchorPane>
+                            <TableView fx:id="stationsTable" layoutY="38.0" prefHeight="441.0" prefWidth="805.0">
+                                <columns>
+                                    <TableColumn fx:id="stationNameColumn" prefWidth="200.0" text="Station Name">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="stationName" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="temperatureColumn" prefWidth="150.0" text="Temperature">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="temperature" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="humidityColumn" prefWidth="150.0" text="Humidity">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="humidity" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="windSpeedColumn" prefWidth="150.0" text="Wind Speed">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="windSpeed" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                     <Label fx:id="prediction_text" layoutX="14.0" layoutY="14.0" text="PREDICTION:" />
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Untitled Tab 2" />
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
